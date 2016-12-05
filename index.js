@@ -32,7 +32,7 @@ function startCheck(option) {
   } else {
     s = 'check-in';
   }
-  nightmare
+  return nightmare
     .goto('https://femascloud.com/bonio2016/accounts/login')
     .wait('#user_username')
     .type('input#user_username', 'neil.zheng')
