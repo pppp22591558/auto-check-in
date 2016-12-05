@@ -1,9 +1,7 @@
 const schedule = require('node-schedule');
 const Nightmare = require('nightmare');
 
-const nightmare = Nightmare({ openDevTools: {
-    mode: 'detach'
-  }, show: true });
+const nightmare = Nightmare();
 
 const checkInRule = new schedule.RecurrenceRule();
 checkInRule.dayOfWeek = [0, new schedule.Range(1, 5)];
@@ -35,8 +33,8 @@ function startCheck(option) {
   return nightmare
     .goto('https://femascloud.com/bonio2016/accounts/login')
     .wait('#user_username')
-    .type('input#user_username', 'neil.zheng')
-    .type('input#user_passwd', 'aa55665566')
+    .type('input#user_username', _____) //帳號
+    .type('input#user_passwd', _____) //密碼
     .click('#s_buttom')
     .wait('.clock_enabled')
     .evaluate(function(){
