@@ -9,7 +9,7 @@ const nightmare = Nightmare({ openDevTools: {
 
 const rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [0, new schedule.Range(1, 5)];
-rule.hour = 10;
+rule.hour = 1;
 rule.minute = 0;
 
 nightmare
